@@ -1,0 +1,7 @@
+<header class="pokedex-header">{{ pokemonService.currPokemon.name }}</header>
+<img class="picture" src="{{pokemonService.currPokemon.picture}}">
+<p class="description">
+	{{ pokemonService.currPokemon.description }}
+</p>
+
+<button ng-click="deletePokemon()" class="delete-btn btn btn-block btn-lg btn-warning">Delete</button>
