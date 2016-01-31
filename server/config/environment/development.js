@@ -6,7 +6,7 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/angularfull2-dev'
+    uri: 'mongodb://localhost/test'
   },
 
   // Seed database on startup

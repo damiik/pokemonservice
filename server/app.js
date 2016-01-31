@@ -78,18 +78,7 @@
 // └── thing.spec.js           - Test
 
 
-// npm update -g bower
-// npm update -g grunt-cli
-// npm update -g yo
-// npm update -g generator-xxxxxx
-
-
-// REINSTALL MODULE generator-meanjs
-// # remove meanjs generator from npm global
-// npm remove generator-meanjs -g
-// npm cache clean -g
-
-
+// npm install mocha --save          (needed when jasmine is used for testing)
 
 
 
