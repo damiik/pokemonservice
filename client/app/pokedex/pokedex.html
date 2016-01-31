@@ -1,1 +1,14 @@
-<div>This is the pokedex view.</div>
+<div class="pokedex-container">
+	<div class="pokemon-list">
+		<header class="pokedex-header">Pokedex <a href="/add"><button class="btn btn-block btn-sm btn-info"><i class="fa fa-plus"></i></button></a></header>
+		<ul>
+			<li ng-repeat="pokemon in pokemonService.allPokemons" ng-click="viewPokemon(pokemon)">
+				<span class="index">{{ $index + 1}}</span>
+				{{ pokemon.name }}
+				<img src="{{pokemon.picture}}" class="pokemon-thumbnail">
+			</li>
+		</ul>
+	</div>
+	<div ui-view="pokedex-content" class="pokemon-view">
+	</div>
+</div>
