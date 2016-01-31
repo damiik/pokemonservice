@@ -82,8 +82,11 @@
 
 
 
-//yo angular-fullstack:endpoint dogs
-//yo angular-fullstack:route dogdex
+//yo angular-fullstack:endpoint pokemons
+//yo angular-fullstack:route pokedex
+
+
+//ctrl+P go to anything
 
 
 
