@@ -123,7 +123,7 @@ describe('GET /api/pokemons  (by Dario)', function() {
 
     request(app)
     .get('/api/pokemons')
-    .expect(200)
+    .expect(200) // "OK"
     .expect('Content-Type', /json/)
     .end(function(err, res) {
       if(err) return done(err);
@@ -132,3 +132,24 @@ describe('GET /api/pokemons  (by Dario)', function() {
     });
   });
 });
+
+
+// functionality test
+describe('POST /api/pokemons (by Dario)', function() {
+
+  it('should respond with JSON object', function( done ) {
+
+    request(app)
+    .post('/api/pokemons')
+    .type('json')
+    .send({name:'Pikachu', picture:'http://awesomeSite.com/pik.png', description:'This pokemon is yellow'})
+    .expect(201) // "Created"
+    .end(function(err, res) {
+
+      if(err) return done(err);
+      res.body.should.be.instanceof(Object);
+      done();
+    });
+  });
+});
+
