@@ -1,0 +1,22 @@
+
+<header class="pokedex-header">Edit a Pokemon</header>
+
+<div class="form-group">
+	<ul>
+		<li>
+			<label for="name">Name</label>
+			<input ng-model="pokemonService.currPokemon.name" name="name" type="text" placeholder="Pokemon Name" class="form-control">
+		</li>
+		<li>
+			<label for="image">Image</label>
+			<input ng-model="pokemonService.currPokemon.picture" name="image" type="text" placeholder="Image URL" class="form-control">
+		</li>
+		<li>
+			<label for="description">Description</label>
+			<textarea ng-model="pokemonService.currPokemon.description" name="description" placeholder="This pokemon is...."></textarea>
+		</li>
+	</ul>
+
+	<button ng-click="updatePokemon()" class="create-btn btn btn-block btn-sm btn-success">Update</button>
+</div>
+

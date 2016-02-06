@@ -15,10 +15,25 @@ angular.module('angularfull2App')
   		$location.path('/');
   	};
 
+  	$scope.updatePokemon = function () {
+
+  		pokemonService.editPokemon(pokemonService.currPokemon);
+  		$location.path('/' + pokemonService.currPokemon._id);
+  	};
+
   	$scope.newPokemon = { name: '', picture: '', description: '' };
 
   	$scope.addPokemon = function () {
   		pokemonService.createPokemon($scope.newPokemon);
   		$scope.newPokemon = { name: '', picture: '', description: '' };
   	};
+
+
+    $scope.goEditPokemon = function() {
+
+    	console.log('edit pokemon:' + '/' + pokemonService.currPokemon._id + '/edit');
+        $location.path('/' + pokemonService.currPokemon._id + '/edit');
+    };
+
   });
+

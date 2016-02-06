@@ -21,5 +21,12 @@ angular.module('angularfull2App')
       	views: {
       		'pokedex-content': { templateUrl: 'app/pokedex/pokedex.view.html' }
       	}
+      })
+      .state('pokedex.edit', {
+      	url: ':name/edit',
+      	controller: 'PokedexCtrl',
+      	views: {
+        	'pokedex-content': { templateUrl: 'app/pokedex/pokedex.edit.html' }
+        }
       });
   });
